@@ -36,7 +36,44 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: #666
-
+//toggle menu mobile
+.toggle-mnu 
+	width: 28px
+	height: 20px
+	position: relative
+	z-index: 101
+	span
+		position: relative
+		display: block
+		width: 100%
+		height: 5px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+		&:after, &:before
+			content: ""
+			position: absolute
+			left: 0
+			top: -9px
+			width: 100%
+			height: 5px
+			background-color: #fff
+			transition: all 0.3s
+			backface-visibility: hidden
+			border-radius: 2px
+		&:after
+			top: 9px
+	span, span
+.toggle-mnu.on
+	span 
+		background-color: transparent
+		&:before
+			transform: rotate(45deg) translate(5px, 5px)
+			background-color: #000
+		&:after
+			transform: rotate(-45deg) translate(7px, -8px)
+			background-color: #000
 //Custom Styles Here
 
 
